@@ -1,9 +1,10 @@
 {
-    "name": "VRChatPackageTemplate.Editor",
-    "references": [],
-    "includePlatforms": [
-        "Editor"
+    "name": "HoshinoLabs.ClientSimPatcher",
+    "rootNamespace": "HoshinoLabs.ClientSimPatcher",
+    "references": [
+        "GUID:fbe77e2f7bc98c64b9a0829b88843fc6"
     ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
