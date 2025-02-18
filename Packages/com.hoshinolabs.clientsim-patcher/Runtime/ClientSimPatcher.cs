@@ -10,6 +10,12 @@ namespace HoshinoLabs.ClientSimPatcher {
             if (playerObjectList != null) {
                 playerObjectList.SetValue(null, null);
             }
+
+            var lastStringRequest = typeof(VRC.SDK3.StringLoading.VRCStringDownload)
+                .GetField("_lastStringRequest", BindingFlags.Static | BindingFlags.NonPublic);
+            if (lastStringRequest != null) {
+                lastStringRequest.SetValue(null, -5f);
+            }
         }
     }
 }
