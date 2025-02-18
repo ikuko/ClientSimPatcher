@@ -11,6 +11,12 @@ namespace HoshinoLabs.ClientSimPatcher {
                 playerObjectList.SetValue(null, null);
             }
 
+            var lastImageRequest = typeof(VRC.SDK3.Image.VRCImageDownloader.ImageDownloader)
+                .GetField("_lastImageRequest", BindingFlags.Static | BindingFlags.NonPublic);
+            if (lastImageRequest != null) {
+                lastImageRequest.SetValue(null, -5f);
+            }
+
             var lastStringRequest = typeof(VRC.SDK3.StringLoading.VRCStringDownload)
                 .GetField("_lastStringRequest", BindingFlags.Static | BindingFlags.NonPublic);
             if (lastStringRequest != null) {
